@@ -1,2 +1,2 @@
-# css-nuke
-MA SHEILA
+# CSS Nuke
+A compiled list of CSS files I made.
