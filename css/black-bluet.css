@@ -1,0 +1,466 @@
+/* =========================================================
+   UNIVERSAL DARK GRAY THEME
+   Paste into basically any HTML project
+   ========================================================= */
+
+:root {
+    --bg: #181818;
+    --surface: #242424;
+    --surface-2: #2e2e2e;
+    --surface-3: #363636;
+
+    --border: #3d3d3d;
+
+    --text: #ffffff;
+    --muted: #bdbdbd;
+
+    --accent: #5865f2;
+    --accent-hover: #4752c4;
+
+    --danger: #ed4245;
+    --success: #43b581;
+}
+
+
+/* =========================
+   EVERYTHING
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+
+    min-height: 100vh;
+
+    background: var(--bg);
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   TEXT
+   ========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text);
+    margin-top: 0;
+}
+
+p,
+span,
+label,
+li {
+    color: var(--text);
+}
+
+small {
+    color: var(--muted);
+}
+
+
+/* =========================
+   LINKS
+   ========================= */
+
+a {
+    color: #7289da;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8ea1e1;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   INPUTS
+   ========================= */
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    background: #191919;
+    color: #ffffff;
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+    outline: none;
+
+    font: inherit;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #888888;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 2px rgba(88, 101, 242, 0.2);
+}
+
+select {
+    cursor: pointer;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+button {
+    padding: 10px 16px;
+
+    background: var(--accent);
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    font: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        transform 0.1s ease,
+        opacity 0.15s ease;
+}
+
+button:hover {
+    background: var(--accent-hover);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   SECONDARY BUTTON
+   ========================= */
+
+.secondary {
+    background: var(--surface-2);
+    color: var(--text);
+
+    border: 1px solid var(--border);
+}
+
+.secondary:hover {
+    background: var(--surface-3);
+}
+
+
+/* =========================
+   DANGER BUTTON
+   ========================= */
+
+.danger {
+    background: var(--danger);
+}
+
+.danger:hover {
+    background: #c93639;
+}
+
+
+/* =========================
+   CARDS / CONTAINERS
+   ========================= */
+
+.card,
+.panel,
+.container,
+.box {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   CODE
+   ========================= */
+
+code,
+pre {
+    background: #111111;
+    color: #eeeeee;
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+code {
+    padding: 2px 5px;
+}
+
+pre {
+    padding: 15px;
+
+    overflow-x: auto;
+}
+
+
+/* =========================
+   TABLES
+   ========================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: var(--surface);
+
+    color: var(--text);
+}
+
+th,
+td {
+    padding: 10px 12px;
+
+    text-align: left;
+
+    border: 1px solid var(--border);
+}
+
+th {
+    background: var(--surface-2);
+}
+
+tr:hover td {
+    background: #292929;
+}
+
+
+/* =========================
+   LISTS
+   ========================= */
+
+ul,
+ol {
+    color: var(--text);
+}
+
+
+/* =========================
+   HORIZONTAL LINE
+   ========================= */
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+
+    margin: 20px 0;
+}
+
+
+/* =========================
+   IMAGES
+   ========================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 6px;
+}
+
+
+/* =========================
+   CHECKBOXES / RADIOS
+   ========================= */
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+
+    accent-color: var(--accent);
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FILE INPUT
+   ========================= */
+
+input[type="file"] {
+    padding: 8px;
+
+    background: var(--surface);
+}
+
+
+/* =========================
+   FORM ELEMENTS
+   ========================= */
+
+form {
+    display: block;
+}
+
+fieldset {
+    padding: 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+legend {
+    padding: 0 6px;
+
+    color: var(--muted);
+}
+
+
+/* =========================
+   BLOCKQUOTES
+   ========================= */
+
+blockquote {
+    margin: 15px 0;
+    padding: 10px 15px;
+
+    background: var(--surface);
+
+    border-left: 4px solid var(--accent);
+
+    color: var(--muted);
+}
+
+
+/* =========================
+   SELECTION
+   ========================= */
+
+::selection {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+
+/* =========================
+   SCROLLBAR
+   ========================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3d3d3d;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #505050;
+}
+
+
+/* =========================
+   UTILITY CLASSES
+   ========================= */
+
+.hidden {
+    display: none !important;
+}
+
+.text-muted {
+    color: var(--muted) !important;
+}
+
+.text-danger {
+    color: var(--danger) !important;
+}
+
+.text-success {
+    color: var(--success) !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .card,
+    .panel,
+    .container,
+    .box {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

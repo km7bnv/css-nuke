@@ -1,0 +1,682 @@
+
+/* =========================================================
+   GENERIC DARK BLUE / PURPLE THEME
+   Works with basically any HTML project
+   ========================================================= */
+
+
+/* =========================================================
+   THEME VARIABLES
+   ========================================================= */
+
+:root {
+    --bg: #0f172a;
+
+    --surface: #1e293b;
+    --surface-2: #263449;
+    --surface-3: #334155;
+
+    --border: #334155;
+
+    --text: #f8fafc;
+    --muted: #cbd5e1;
+    --placeholder: #94a3b8;
+
+    --accent: #6366f1;
+    --accent-hover: #818cf8;
+    --accent-dark: #4f46e5;
+
+    --success: #22c55e;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+}
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+
+    background: var(--bg);
+
+    color-scheme: dark;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 20px;
+
+    background: var(--bg);
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+
+    color: var(--text);
+}
+
+p {
+    color: var(--text);
+}
+
+small {
+    color: var(--muted);
+}
+
+strong,
+b {
+    color: var(--text);
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+    color: #818cf8;
+
+    text-decoration: none;
+
+    transition: color 0.15s ease;
+}
+
+a:hover {
+    color: #a5b4fc;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+    padding: 10px 16px;
+
+    background: var(--accent);
+    color: #ffffff;
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        transform 0.1s ease,
+        opacity 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+button:hover {
+    background: var(--accent-hover);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.secondary {
+    background: var(--surface-2);
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+}
+
+.secondary:hover {
+    background: var(--surface-3);
+}
+
+
+/* =========================================================
+   DANGER BUTTON
+   ========================================================= */
+
+.danger {
+    background: var(--danger);
+}
+
+.danger:hover {
+    background: #dc2626;
+}
+
+
+/* =========================================================
+   SUCCESS BUTTON
+   ========================================================= */
+
+.success {
+    background: var(--success);
+}
+
+.success:hover {
+    background: #16a34a;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    background: #172033;
+    color: #ffffff;
+
+    border: 1px solid #475569;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+}
+
+
+/* Placeholder */
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--placeholder);
+
+    opacity: 1;
+}
+
+
+/* Focus */
+
+input:focus,
+textarea:focus,
+select:focus {
+    background: #18243a;
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 2px rgba(99, 102, 241, 0.25);
+}
+
+
+/* Disabled */
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   CHECKBOXES / RADIO BUTTONS
+   ========================================================= */
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+
+    accent-color: var(--accent);
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FILE INPUT
+   ========================================================= */
+
+input[type="file"] {
+    padding: 9px;
+
+    background: var(--surface);
+}
+
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CARDS / PANELS
+   ========================================================= */
+
+.card,
+.panel,
+.container,
+.box {
+    padding: 20px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    padding: 16px 20px;
+
+    background: var(--surface);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    padding: 16px 20px;
+
+    background: var(--surface);
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+    padding: 10px;
+
+    background: var(--surface);
+
+    border-bottom: 1px solid var(--border);
+}
+
+nav a {
+    display: inline-block;
+
+    padding: 8px 10px;
+
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background: var(--surface-2);
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+ul,
+ol {
+    color: var(--text);
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: var(--surface);
+
+    color: var(--text);
+}
+
+th,
+td {
+    padding: 11px 13px;
+
+    border: 1px solid var(--border);
+
+    text-align: left;
+}
+
+th {
+    background: var(--surface-2);
+
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+tr:hover td {
+    background: #263449;
+}
+
+
+/* =========================================================
+   CODE
+   ========================================================= */
+
+code {
+    padding: 2px 6px;
+
+    background: #111827;
+    color: #e2e8f0;
+
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+}
+
+pre {
+    padding: 16px;
+
+    overflow-x: auto;
+
+    background: #111827;
+    color: #e2e8f0;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+}
+
+
+/* =========================================================
+   BLOCKQUOTES
+   ========================================================= */
+
+blockquote {
+    margin: 16px 0;
+
+    padding: 10px 15px;
+
+    background: var(--surface);
+
+    border-left: 4px solid var(--accent);
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   HORIZONTAL LINE
+   ========================================================= */
+
+hr {
+    margin: 20px 0;
+
+    border: none;
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+fieldset {
+    padding: 16px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+legend {
+    padding: 0 8px;
+
+    color: var(--muted);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   DETAILS / SUMMARY
+   ========================================================= */
+
+details {
+    padding: 10px 12px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+summary {
+    color: var(--text);
+
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+progress {
+    width: 100%;
+    height: 10px;
+
+    accent-color: var(--accent);
+}
+
+
+/* =========================================================
+   MARK
+   ========================================================= */
+
+mark {
+    padding: 2px 4px;
+
+    background: var(--accent);
+    color: #ffffff;
+
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #475569;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+
+/* =========================================================
+   UTILITY CLASSES
+   ========================================================= */
+
+.hidden {
+    display: none !important;
+}
+
+.text-muted {
+    color: var(--muted) !important;
+}
+
+.text-danger {
+    color: var(--danger) !important;
+}
+
+.text-success {
+    color: var(--success) !important;
+}
+
+.text-warning {
+    color: var(--warning) !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .card,
+    .panel,
+    .container,
+    .box {
+        padding: 16px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+
+    table {
+        display: block;
+
+        overflow-x: auto;
+    }
+}
+
